@@ -1,21 +1,15 @@
-import java.util.Arrays;
-
 class Solution {
     public int maxProfit(int[] prices) {
         
-        if(prices.length==0) return 0;
+        int min=prices[0];
+        int maxProfit=0;
 
-        int count=0;
-        for(int i=0;i<prices.length;i++){
-            if(prices[0]>prices[i]){
-                count++;
-            }
+        for(int i=1;i<prices.length;i++){
+            int cost=prices[i]-min;
+            maxProfit=Math.max(maxProfit, cost);
+            min=Math.min(min, prices[i]);
         }
-        if(count==prices.length) return 0;
-        
-        
 
-        
-        return 0;
+        return maxProfit;
     }
 }
