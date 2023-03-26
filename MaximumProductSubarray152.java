@@ -3,7 +3,9 @@ import java.util.Arrays;
 class Solution {
     public int maxProduct(int[] nums) {
         
-        int result = 0;
+        int[] tempNums=nums;
+        Arrays.sort(tempNums);
+        int result = tempNums[tempNums.length-1];
         int currentMax =1;
         int currentMin = 1;
         for(int n :nums){
