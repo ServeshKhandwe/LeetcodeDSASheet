@@ -14,6 +14,7 @@
 
 // Optimised solution
 // Accepted
+
 class Solution {
     public int maxArea(int[] height) {
         int max=Integer.MIN_VALUE;
